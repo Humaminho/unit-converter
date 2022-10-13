@@ -76,13 +76,22 @@ a:hover{
     font-size: 20px;
     color: white;
 }
-
+.input-container{
+    width: 100px;
+}
 .input-el{
     height: 60px;
-    max-width: 100px;
+    width: 60px;
     background-color:#9F1239;
     border: 1px solid white;
     border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+.input-el:focus{
+    outline: none;
+    border: 2px solid white;
+    background: #911818;
+    width: 100%;
 }
 
 .input-el:hover {

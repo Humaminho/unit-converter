@@ -9,7 +9,7 @@ let yourInput = inputEl.value ; //input target
 
 let meterToFeet = (Number(inputEl.value) * 3.281).toFixed(2)
 
-convertEl.addEventListener("click", function () { //RENDER FUNCTION
+function convert() { //RENDER FUNCTION
     if (isNaN(inputEl.value ) ) {
         lengthEl.textContent = volumeEl.textContent = massEl.textContent = `${inputEl.value} f kerrek`
     } else if (inputEl.value === "") {
@@ -31,5 +31,14 @@ convertEl.addEventListener("click", function () { //RENDER FUNCTION
 
     massEl.textContent = `${inputEl.value} kilos = ${kiloToPound} pounds | ${inputEl.value} pounds = ${poundToKilo} kilos`
     }
-    
+}
+
+convertEl.addEventListener("click", function(){
+    convert()
+})
+
+inputEl.addEventListener("keypress", function(event){
+    if(event.key==="Enter"){
+        convert()
+    }
 })
